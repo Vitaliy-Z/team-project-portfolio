@@ -77,6 +77,7 @@
   }
 
   .description-about-me-text {
+    padding: 64px 64px 436px;
     border-radius: 24px;
     max-width: 680px;
   }
