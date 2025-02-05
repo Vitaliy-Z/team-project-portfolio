@@ -1,3 +1,93 @@
 .about-me-section {
-  color: aqua;
+  color: var(--main-text);
+  padding: 96px 32px;
+}
+
+.about-me-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.description-about-me-text {
+  padding: 32px 32px 272px;
+  border-radius: 24px;
+  max-width: 343px;
+  background: var(--cards);
+}
+.description-about-me-span-f {
+}
+.description-about-me-span-w {
+}
+.description-about-me-img {
+}
+.about-me-list {
+}
+.about-me-item {
+}
+.about-me-list-i {
+}
+.about-me-item-l {
+}
+.about-me-title {
+}
+.about-me-list-button {
+}
+.about-me-text {
+}
+.about-me-skills-list {
+}
+.about-me-skills-item {
+}
+.about-me-skills-list-i {
+}
+.about-me-skills-list-l {
+}
+.about-me-skills-text {
+}
+.about-me-skills-button {
+}
+
+@media screen and (min-width: 375px) {
+  .about-me-section {
+  }
+  .visually-hidden {
+  }
+  .description-about-me-list {
+  }
+  .description-about-me-item {
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-section {
+  }
+  .visually-hidden {
+  }
+  .description-about-me-list {
+  }
+  .description-about-me-item {
+    max-width: 704px;
+  }
+  .description-about-me-text {
+    padding: 64px 64px 436px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me-section {
+  }
+  .visually-hidden {
+  }
+  .about-me-box {
+    flex-direction: row;
+  }
+  .description-about-me-item {
+    border-radius: 24px;
+    max-width: 680px;
+  }
+  .description-about-me-text {
+    padding: 64px 64px 436px;
+  }
 }

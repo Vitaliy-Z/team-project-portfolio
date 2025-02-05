@@ -14,6 +14,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --background: #1c1d20;
+  --cards: #242527;
+  --arrow: #3b3b3b;
+  --button-text: #ed3b44;
+  --main-text: #fafafa;
 }
 body {
   display: flex;
@@ -24,4 +30,17 @@ body {
 }
 main {
   flex-grow: 1;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
