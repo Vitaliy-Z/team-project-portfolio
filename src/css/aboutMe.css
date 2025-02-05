@@ -1,6 +1,5 @@
 .about-me-section {
-  color: var(--main-text);
-  padding: 96px 32px;
+  padding-top: 64px;
 }
 
 .about-me-box {
@@ -50,14 +49,6 @@
 }
 
 @media screen and (min-width: 375px) {
-  .about-me-section {
-  }
-  .visually-hidden {
-  }
-  .description-about-me-list {
-  }
-  .description-about-me-item {
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -71,6 +62,7 @@
     max-width: 704px;
   }
   .description-about-me-text {
+    max-width: 704px;
     padding: 64px 64px 436px;
   }
 }
@@ -83,7 +75,8 @@
   .about-me-box {
     flex-direction: row;
   }
-  .description-about-me-item {
+
+  .description-about-me-text {
     border-radius: 24px;
     max-width: 680px;
   }
