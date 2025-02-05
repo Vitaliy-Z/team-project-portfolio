@@ -1,5 +1,6 @@
 .about-me-section {
   padding-top: 64px;
+  padding-bottom: 32px;
 }
 
 .about-me-box {
@@ -7,6 +8,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  padding: 16px 0px 32px;
 }
 
 .description-about-me-text {
@@ -14,26 +16,54 @@
   border-radius: 24px;
   max-width: 343px;
   background: var(--cards);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
 }
 .description-about-me-span-f {
+  color: var(--button-text);
 }
 .description-about-me-span-w {
+  color: var(--arrow);
 }
+
+.description-about-me-picture {
+}
+
 .description-about-me-img {
+  border-radius: 24px;
 }
 .about-me-list {
+  margin-bottom: 32px;
 }
 .about-me-item {
+  padding-bottom: 20px;
 }
-.about-me-list-i {
-}
-.about-me-item-l {
+
+.about-me-item-l-b {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 12px;
 }
 .about-me-title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
 }
+
 .about-me-list-button {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 9px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
 }
 .about-me-text {
+  letter-spacing: -0.02em;
 }
 .about-me-skills-list {
 }
@@ -58,12 +88,10 @@
   }
   .description-about-me-list {
   }
-  .description-about-me-item {
-    max-width: 704px;
-  }
   .description-about-me-text {
     max-width: 704px;
     padding: 64px 64px 436px;
+    max-width: 704px;
   }
 }
 
@@ -80,8 +108,5 @@
     padding: 64px 64px 436px;
     border-radius: 24px;
     max-width: 680px;
-  }
-  .description-about-me-text {
-    padding: 64px 64px 436px;
   }
 }
