@@ -1,3 +1,7 @@
+:root {
+  --transition: 300ms linear;
+}
+
 /* .reviews-section {
   
 } */
@@ -11,6 +15,13 @@
 
 .reviews-list {
   margin: 32px 0;
+  height: 150px;
+}
+
+.reviews-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 .btn-arrow {
@@ -20,9 +31,30 @@
   width: 52px;
   height: 52px;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
 }
 
-.btn-arrow.icon-arrow {
-  stroke-width: 2px;
-  fill: #fafafa;
+.btn-arrow.btn-backward {
+  transform: rotate(180deg);
 }
+
+.btn-arrow:hover,
+.btn-arrow:focus {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+}
+
+.icon-arrow {
+  /* stroke-width: 2px; */
+  stroke: #3b3b3b;
+  transition: var(--transition);
+}
+
+
+.btn-arrow:hover .icon-arrow,
+.btn-arrow:focus .icon-arrow {
+  stroke: #fafafa;
+}
+
