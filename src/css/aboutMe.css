@@ -190,6 +190,10 @@
     padding-bottom: 22px;
   }
 
+  .about-me-text {
+    max-width: 612px;
+  }
+
   .about-me-skills-list {
     gap: 72px;
   }
