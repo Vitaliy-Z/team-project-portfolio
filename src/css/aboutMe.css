@@ -71,6 +71,13 @@
   height: 36px;
   background-color: transparent;
 }
+
+.about-me-svg {
+  stroke: white;
+  width: 18px;
+  height: 18px;
+}
+
 .about-me-text {
   line-height: 1.5;
   letter-spacing: -0.02em;
@@ -79,6 +86,7 @@
 .about-me-skills-list {
   display: flex;
   gap: 55px;
+  align-items: center;
 }
 
 .about-me-skills-list-i {
@@ -111,6 +119,11 @@
   height: 28px;
   background-color: transparent;
   border: none;
+}
+.about-me-skills-svg {
+  stroke: #3b3b3b;
+  width: 28px;
+  height: 28px;
 }
 
 /* @media screen and (min-width: 375px) {
@@ -160,6 +173,17 @@
   }
 
   .about-me-skills-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-me-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-me-skills-svg {
+    stroke: #3b3b3b;
     width: 40px;
     height: 40px;
   }
