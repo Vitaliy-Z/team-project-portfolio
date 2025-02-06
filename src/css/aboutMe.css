@@ -52,6 +52,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  visibility: hidden;
+  overflow: hidden;
 }
 .about-me-item-l-b {
   display: flex;
@@ -79,6 +81,12 @@
   stroke: white;
   width: 18px;
   height: 18px;
+  transition-duration: 500ms;
+}
+
+.about-me-item.is-active .about-me-svg {
+  transform: rotate(180deg);
+  transition-duration: 500ms;
 }
 
 .about-me-text {
