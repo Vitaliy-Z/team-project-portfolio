@@ -9,7 +9,8 @@
 .reviews-title {
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: rgba(250, 250, 250, 0.4);
+  /* color: rgba(250, 250, 250, 0.4); */
+  color: red;
   text-transform: uppercase;
 }
 
