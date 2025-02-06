@@ -1,3 +1,28 @@
-.reviews-section {
-  color: maroon;
+/* .reviews-section {
+  
+} */
+
+.reviews-title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.4);
+  text-transform: uppercase;
+}
+
+.reviews-list {
+  margin: 32px 0;
+}
+
+.btn-arrow {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  padding: 14px;
+  width: 52px;
+  height: 52px;
+  background-color: transparent;
+}
+
+.btn-arrow.icon-arrow {
+  stroke-width: 2px;
+  fill: #fafafa;
 }
