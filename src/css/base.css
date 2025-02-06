@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
+@import url('https://unpkg.com/accordion-js@3.4.0/dist/accordion.min.css');
+
 :root {
   font-family: 'Inter Tight', sans-serif;
   font-size: 16px;
