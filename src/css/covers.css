@@ -1,5 +1,52 @@
 .covers-section {
   color: violet;
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  max-height: 960p;
+
+}
+
+.covers-section::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0) 80%);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.covers-section::after {
+  content: "";
+  position: absolute;
+top: 20%;
+left:60%;
+width: 350px;
+height: 350px;
+background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0) 80%);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.covers-section.circle {
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.4) 0%, rgba(255, 0, 0, 0) 80%);
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
 }
 
 
@@ -10,63 +57,90 @@
 .covers-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
   position: relative;
-  max-height: 508px;
+  overflow: hidden;
 }
 
 .marquee {
-  width: 100%;
 overflow: hidden;
+gap: 20px;
+position: relative;
+display: flex;
   white-space: nowrap;
   position: relative;
-  transform: rotate(-16deg);
+   flex-wrap: nowrap;
+   animation-play-state: paused;
 }
 
+.covers.in-viewport .marquee {
+animation-play-state: running;
+}
+
+.marquee::after {
+  content: attr(data-content);
+  display: flex;
+}
+
+.marquee li {
+  list-style: none;
+
+}
+
+.speed-1 {top: 0;}
+.speed-2 {top: 150px;}
+.speed-3 {top: 300px;}
+.speed-4 {top: 450px;}
+.speed-5 {top: 600px;}
+
+
+
 .marquee ul {
+  position: relative;
   display: flex;
   gap: 20px;
 list-style: none;
 padding: 0;
 margin: 0;
 animation-timing-function: linear;
+
 }
 
 .marquee img {
-  width: 200px;
-  height: auto;
+max-width: 228px;
+
+  object-fit: cover;
 }
 
 
-@keyframes diagonalMove {
+@keyframes diagonalMoveUp {
   from {
-    transform: translateX(0);
+    transform: translate(100vw, 50vh) rotate(16deg);
   }
   to {
-    transform: translateX(-30%);
+    transform: translate(-100vw, -50vh) rotate(16deg);
   }
 }
 
 
-
-.speed-1 ul {
-  animation: diagonalMove 5s linear infinite
+.speed-1 {
+  animation: diagonalMoveUp 5s linear infinite
 }
 
-.speed-2 ul {
-  animation: diagonalMove 7s linear infinite
+.speed-2 {
+  animation: diagonalMoveUp 7s linear infinite
 }
 
-.speed-3 ul {
-  animation: diagonalMove 9s linear infinite
+.speed-3 {
+  animation: diagonalMoveUp 9s linear infinite
 }
 
-.speed-4 ul {
-  animation: diagonalMove 11s linear infinite
+.speed-4 {
+  animation: diagonalMoveUp 11s linear infinite
 }
 
-.speed-5 ul {
-  animation: diagonalMove 12s linear infinite
+.speed-5 {
+  animation: diagonalMoveUp 12s linear infinite
 }
 
 
