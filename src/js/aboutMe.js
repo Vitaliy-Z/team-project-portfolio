@@ -19,8 +19,9 @@ new Accordion(".about-me-list", {
 new Swiper('.about-me-skills-list', {
 
     loop: true,
-    // oneWayMovement: true,
-    // slideToClickedSlide: true,
+    oneWayMovement: true,
+    edgeSwipeDetection: true,
+    slideToClickedSlide: true,
     wrapperClass: 'about-me-skills-list-i',
     slideClass: 'about-me-skills-item-l',
     slidesPerView: 6,
@@ -29,5 +30,7 @@ new Swiper('.about-me-skills-list', {
     navigation: {
         nextEl: '.about-me-skills-button',
     },
-});
-
+    cssMode: true,
+  
+  },
+);
