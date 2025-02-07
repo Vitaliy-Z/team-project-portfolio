@@ -1,4 +1,3 @@
-import Swiper from 'swiper';
 import Accordion from "accordion-js";
 
 new Accordion(".about-me-list", {
@@ -16,4 +15,19 @@ new Accordion(".about-me-list", {
     }
 });
 
+
+new Swiper('.about-me-skills-list', {
+
+    loop: true,
+    // oneWayMovement: true,
+    // slideToClickedSlide: true,
+    wrapperClass: 'about-me-skills-list-i',
+    slideClass: 'about-me-skills-item-l',
+    slidesPerView: 6,
+    centeredSlides: false,
+    loopedSlides: 6,    
+    navigation: {
+        nextEl: '.about-me-skills-button',
+    },
+});
 

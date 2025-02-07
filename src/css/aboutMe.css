@@ -1,6 +1,3 @@
-@import 'swiper/css';
-/* @import 'accordion-js/dist/accordion.min.css'; */
-
 .about-me-section {
   padding-top: 64px;
   padding-bottom: 32px;
@@ -97,15 +94,19 @@
   display: flex;
   gap: 55px;
   align-items: center;
+  overflow: hidden;
 }
 
 .about-me-skills-list-i {
   display: flex;
+  overflow: hidden;
+  min-width: 260px;
 }
+
 .about-me-skills-item-l {
   border: 1px solid rgba(250, 250, 250, 0.2);
-  width: 130px;
-  height: 130px;
+  min-width: 130px;
+  min-height: 130px;
   border-radius: 100%;
   stroke-width: 1px;
   stroke: rgba(250, 250, 250, 0.2);
@@ -114,7 +115,7 @@
   justify-content: center;
   align-items: center;
 }
-
+.swiper-slide-active,
 .about-me-skills-item-l:active,
 .about-me-skills-item-l:focus {
   background-color: var(--button-text);
@@ -173,8 +174,8 @@
   }
 
   .about-me-skills-item-l {
-    width: 200px;
-    height: 200px;
+    min-width: 200px;
+    min-height: 200px;
   }
 
   .about-me-skills-text {
@@ -196,6 +197,10 @@
     width: 40px;
     height: 40px;
   }
+
+  .about-me-skills-list-i {
+    min-width: 600px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -212,6 +217,7 @@
   .description-about-me-text {
     padding: 64px 64px 436px;
     max-width: 680px;
+    max-height: 700px;
     font-size: 38px;
     line-height: 1.05263;
   }
@@ -229,6 +235,14 @@
 
   .about-me-skills-list {
     gap: 72px;
+  }
+
+  .description-about-me-picture {
+    max-height: 700px;
+  }
+
+  .about-me-skills-list-i {
+    min-width: 1200px;
   }
 
   .about-me-item-l {
