@@ -6,17 +6,72 @@
   
 } */
 
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .reviews-title {
   font-weight: 600;
   letter-spacing: -0.02em;
-  /* color: rgba(250, 250, 250, 0.4); */
-  color: red;
+  color: rgba(250, 250, 250, 0.4);
   text-transform: uppercase;
+  font-size: 16px;
 }
 
 .reviews-list {
   margin: 32px 0;
-  height: 150px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .reviews-list {
+    flex-basis: calc((100% - 16px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .reviews-list {
+    flex-basis: calc((100% - 48px) / 4);
+  }
+}
+
+
+.review-item {
+  /* border: 1px solid var(--main-text);  */
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 20px;
+  padding: 32px 24px;
+  width: 343px;
+  min-height: 302px;
+}
+
+@media only screen and (min-width: 1440px) {
+  .review-item {
+    width: 332px;
+  }
+}
+
+
+.reviewer-avatar {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 32px;
+}
+
+.reviewer-name {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  color: var(--main-text);
+  margin-bottom: 8px;
+}
+
+.review-text {
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
 }
 
 .reviews-pagination {
