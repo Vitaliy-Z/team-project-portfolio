@@ -1,3 +1,72 @@
 .covers-section {
   color: violet;
 }
+
+
+.main-text-covers {
+  visibility: hidden;
+}
+
+.covers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  max-height: 508px;
+}
+
+.marquee {
+  width: 100%;
+overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  transform: rotate(-16deg);
+}
+
+.marquee ul {
+  display: flex;
+  gap: 20px;
+list-style: none;
+padding: 0;
+margin: 0;
+animation-timing-function: linear;
+}
+
+.marquee img {
+  width: 200px;
+  height: auto;
+}
+
+
+@keyframes diagonalMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-30%);
+  }
+}
+
+
+
+.speed-1 ul {
+  animation: diagonalMove 5s linear infinite
+}
+
+.speed-2 ul {
+  animation: diagonalMove 7s linear infinite
+}
+
+.speed-3 ul {
+  animation: diagonalMove 9s linear infinite
+}
+
+.speed-4 ul {
+  animation: diagonalMove 11s linear infinite
+}
+
+.speed-5 ul {
+  animation: diagonalMove 12s linear infinite
+}
+
+
