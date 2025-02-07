@@ -26,11 +26,20 @@ new Swiper('.about-me-skills-list', {
     slideClass: 'about-me-skills-item-l',
     slidesPerView: 6,
     centeredSlides: false,
-    loopedSlides: 6,    
+    loopedSlides: 6,
     navigation: {
         nextEl: '.about-me-skills-button',
     },
     cssMode: true,
-  
-  },
-);
+    breakpoints: {
+        375: {
+            slidesPerView: 6, 
+        },
+        768: {
+            slidesPerView: 6,
+        },
+        1440: {
+            slidesPerView: 6,
+        }, 
+    },
+});
