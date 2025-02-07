@@ -1,3 +1,36 @@
 <header class="header">
-  <div class="container">Header</div>
+  <div class="container container-header">
+    <div class="header-logo">
+      <a href="/src/index.html">
+        <img 
+        src="/img/header/image.png" 
+        alt="Logo" 
+        srcset="/img/header/image.png 1x, /img/header/image@2.png 2x" />
+      </a>
+      <p class="header-p">jefferson*</p>
+    </div>
+    <div class="menu-container">
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-button">Menu</label>
+      <ul class="menu-list">
+        <li class="menu-item"><a href="#">About me</a></li>
+        <li class="menu-item"><a href="#">Benefits</a></li>
+        <li class="menu-item"><a href="#">Projects</a></li>
+        <li class="menu-item"><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <button class="header-btm" type="submit">Order the project</button>
+    </div>
+    <button
+      class="header-modal-menu"
+      id="menu-open-btn"
+      type="button"
+      data-menu-open
+    >
+      <svg class="burger-icon" width="28" height="28">
+        <use href="/img/sprite.svg#icon-menu"></use>
+      </svg>
+    </button>
+  </div>
 </header>
