@@ -17,11 +17,10 @@
   "author": "Team-15 of JS-112",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-=======
+
     "accordion-js": "^3.4.0",
     "axios": "^1.7.9",
->>>>>>> main
+
     "swiper": "^11.2.2",
     "vite-plugin-full-reload": "^1.2.0",
     "vite-plugin-html-inject": "^1.1.2"

@@ -10,18 +10,13 @@ const swiper = new Swiper('.swiper', {
                 enabled: true,
                 onlyInViewport: true,
             },
-        });
+});
 
         
-const button = document.querySelector('.see-project');
-        
-        button.addEventListener('click', function(event) {
-            window.location.href = 'https://github.com/github'; 
-        });
+document.querySelectorAll('.see-project').forEach(button => {
+    button.addEventListener('click', function() {
+        window.location.href = 'https://github.com/github'; 
+    });
+});
 
-        window.addEventListener('click', function(event) {
-            if (!button.contains(event.target)) {
-                event.stopPropagation(); 
-            }
-        });
-
+    
