@@ -148,7 +148,7 @@ textarea {
 }
 
 .modal-content {
-  background: #fff;
+  background: var(--background);
   padding: 24px;
   border-radius: 8px;
   position: absolute;
@@ -324,7 +324,7 @@ textarea {
   }
 
   .modal-content {
-    background: #fff;
+    background: var(--background);
     padding: 24px;
     border-radius: 8px;
     position: absolute;
@@ -505,7 +505,7 @@ textarea {
   }
 
   .modal-content {
-    background: #fff;
+    background: var(--background);
     padding: 24px;
     border-radius: 8px;
     position: absolute;
@@ -523,5 +523,12 @@ textarea {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+
+  }
+
+  .footer-modal-svg {
+      width:32px;
+        height: 32px;
+        fill: #fbfbfb;
   }
 }
