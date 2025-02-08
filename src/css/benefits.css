@@ -1,15 +1,15 @@
 
 
-h2{
+.title{
   font-weight: 600;
   font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
+  line-height: 1.5;
+  
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
 
 display: block;
-margin-left: 0;
+
 margin-bottom: 32px;
 }
 
@@ -18,31 +18,30 @@ margin-bottom: 32px;
 .benefits-name{
   font-weight: 600;
 font-size: 20px;
-line-height: 150%;
 letter-spacing: -0.02em;
-color: #FAFAFA;
  }
  .benefits-info{
-  font-weight: 500;
-font-size: 16px;
-line-height: 150%;
 letter-spacing: -0.02em;
 color: rgba(250, 250, 250, 0.6);
  }
 .benefits-item{ 
   border-radius: 20px;
 padding: 24px;
-max-width: 332px;
-max-height: 270px;
+max-width: 344px;
+
 background-color: #242527;
 text-align: left;
 list-style: none;
-margin-bottom: 16px;
 
 }
+.benefits-item:not(:last-child) {
+  margin-bottom: 16px; 
+}
+
+
 .benefits-icon {
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   background: #e63946;
   border-radius: 8px;
   display: flex;
@@ -51,14 +50,14 @@ margin-bottom: 16px;
   margin-bottom: 64px;
  
 }
-.icon-icon{
+.icon-item{
   width: 24px;
   height: 24px;
   stroke: white;
 }
 
 
-.button{
+.nav-button{
   display: flex;
   align-items: center;  
   justify-content: center;  
@@ -70,12 +69,13 @@ margin-bottom: 16px;
   padding: 18px 36px;
   width: 187px;
   height: 55px;
-  color: #FAFAFA;
-  font-size: 16px;
-  font-weight: 500;
+ 
+
+  
   text-align: center;
   white-space: nowrap;  
   transition: background-color 0.3s ease;
+  margin-top: 32px;
 }  
 
 
@@ -89,34 +89,38 @@ margin-bottom: 16px;
 
 
 @media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding: 0 32px;
+  .benefits-item:not(:last-child) {
+    margin-bottom: 0; 
   }
   .benefits-list{
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
     padding: 0;
-    margin: 0;
-    width: 680px;
-    /* margin-left: auto; */
+    
     margin-bottom: 64px;
   }
+
   .benefits-item{
     margin-bottom: 0;
+    max-width: 332px;
   }
+  
 }
-@media only screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-  }
 
+@media only screen and (min-width: 1440px) {
+  
+  
 .container-benefits-section{
   display: flex;
   justify-content: space-between;
+
 }
 
-
-
+.benefits-list {
+ max-width: 680px;
+}
+.benefits-item {
+  flex: 0 1 calc(50% - 16px);
+}
 } 
