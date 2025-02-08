@@ -132,22 +132,6 @@
   }
 }
 
-.speed-1 {
-  animation: diagonalMoveUp 5s linear infinite;
-}
-
-.speed-2 {
-  animation: diagonalMoveUp 7s linear infinite;
-}
-
-.speed-3 {
+.speed {
   animation: diagonalMoveUp 9s linear infinite;
-}
-
-.speed-4 {
-  animation: diagonalMoveUp 11s linear infinite;
-}
-
-.speed-5 {
-  animation: diagonalMoveUp 12s linear infinite;
 }
