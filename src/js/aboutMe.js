@@ -31,15 +31,4 @@ new Swiper('.about-me-skills-list', {
         nextEl: '.about-me-skills-button',
     },
     cssMode: true,
-    // breakpoints: {
-    //     375: {
-    //         slidesPerView: 6, 
-    //     },
-    //     768: {
-    //         slidesPerView: 6,
-    //     },
-    //     1440: {
-    //         slidesPerView: 6,
-    //     }, 
-    // },
 });
