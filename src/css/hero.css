@@ -1,5 +1,7 @@
 /* mobile */
-
+.hero-section {
+  padding: 0;
+}
 .hero-section .container {
   padding: 0;
 }
