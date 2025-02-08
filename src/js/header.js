@@ -8,16 +8,16 @@
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
   refs.menuLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
+    link.addEventListener('click', e => {
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
-      
+
       if (targetElement) {
         e.preventDefault();
         toggleModal();
         targetElement.scrollIntoView({
           behavior: 'smooth',
-          block: 'start'
+          block: 'start',
         });
       }
     });
@@ -28,8 +28,6 @@
   }
 })();
 
-
-
 const menuLinks = document.querySelectorAll('.menu-item');
 
 menuLinks.forEach(link => {
@@ -37,4 +35,3 @@ menuLinks.forEach(link => {
     document.getElementById('menu-toggle').checked = false;
   });
 });
-
