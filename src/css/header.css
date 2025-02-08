@@ -7,16 +7,14 @@
   justify-content: space-between;
 }
 
-
 .header-logo {
   display: flex;
 }
 
-
 .header-p {
   margin-left: 8px;
-font-size: 20px;
-color: #fafafa;
+  font-size: 20px;
+  color: #fafafa;
 }
 
 .menu-container {
@@ -30,10 +28,10 @@ color: #fafafa;
 
 .menu-button {
   cursor: pointer;
-letter-spacing: -0.02em;
-text-decoration: underline;
-text-decoration-skip-ink: none;
-text-underline-offset: 3px;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 3px;
 }
 
 .menu-button:hover {
@@ -57,28 +55,27 @@ text-underline-offset: 3px;
   display: block;
 }
 
-
 .header-btm {
   border: none;
-border-radius: 60px;
-width: 163px;
-height: 55px;
-background-color: #ed3b44;
-letter-spacing: -0.02em;
-color: #fafafa;
+  border-radius: 60px;
+  width: 163px;
+  height: 55px;
+  background-color: #ed3b44;
+  letter-spacing: -0.02em;
+  color: #fafafa;
 }
 
 .header-btm:hover {
-  background-color:#e0373f;;
+  background-color: #e0373f;
 }
 
 .header-modal-menu {
   stroke-width: 2px;
-stroke: #fafafa;
-background-color: #1c1d20;
-border: none;
-display: flex;
-padding: 0;
+  stroke: #fafafa;
+  background-color: #1c1d20;
+  border: none;
+  display: flex;
+  padding: 0;
 }
 
 .burger-btn {
@@ -91,13 +88,12 @@ padding: 0;
 @media (max-width: 767px) {
   .menu-container,
   .header-btm {
-      display: none;
+    display: none;
   }
 
   .burger-btn {
-      display: block;
+    display: block;
   }
-  
 }
 
 @media (min-width: 768px) {
