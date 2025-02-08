@@ -16,19 +16,36 @@ new Accordion(".about-me-list", {
 });
 
 
-new Swiper('.about-me-skills-list', {
 
-    loop: true,
+new Swiper('.about-me-skills-list', {
+    loop: true, // Безкінечний цикл
     oneWayMovement: true,
     edgeSwipeDetection: true,
     slideToClickedSlide: true,
     wrapperClass: 'about-me-skills-list-i',
     slideClass: 'about-me-skills-item-l',
-    slidesPerView: 6,
     centeredSlides: false,
     loopedSlides: 6,
     navigation: {
         nextEl: '.about-me-skills-button',
     },
     cssMode: true,
+
+    // Видаляємо відступи між слайдами
+    spaceBetween: 0,
+
+    // Додаємо адаптивність без відступів і з рівномірним розташуванням
+    breakpoints: {
+        320: {
+            slidesPerView: 'auto', // Автоматичний розрахунок
+        },
+        768: {
+            slidesPerView: 'auto', // Автоматичний розрахунок для планшетів
+            centeredSlides: true, // Центруємо активний слайд
+        },
+        1440: {
+           // Автоматичний розрахунок для великих екранів
+            slidesPerView: 6,
+        },
+    },
 });
