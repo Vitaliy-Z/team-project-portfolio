@@ -1,18 +1,16 @@
-.covers-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+.section-covers {
   overflow: hidden;
-  max-height: 960px;
-  position: relative;
 }
 
-.covers-section::before {
+.container-covers {
+  overflow: hidden;
+  max-height: 508px;
+}
+
+.container-covers::before {
   content: '';
   position: absolute;
-  top: 10%;
+  top: 480%;
   left: 15%;
   width: 350px;
   height: 350px;
@@ -26,26 +24,10 @@
   z-index: -1;
 }
 
-.covers-section::after {
+.container-covers::after {
   content: '';
   position: absolute;
-  top: 20%;
-  left: 60%;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 0, 0, 0.4) 0%,
-    rgba(255, 0, 0, 0) 80%
-  );
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: -1;
-}
-
-.covers-section::before {
-  position: absolute;
-  top: 70%;
+  top: 465%;
   left: 40%;
   width: 350px;
   height: 350px;
@@ -54,90 +36,139 @@
     rgba(255, 0, 0, 0.4) 0%,
     rgba(255, 0, 0, 0) 80%
   );
-  border-radius: 50%;
+  border-radius: 100%;
   filter: blur(100px);
   z-index: -1;
 }
 
-.covers-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.container-covers.circle {
+  content: '';
+  position: absolute;
+  top: 490%;
+  left: 20%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 0, 0, 0.4) 0%,
+    rgba(255, 0, 0, 0) 80%
+  );
+  border-radius: 100%;
+  filter: blur(100px);
+  z-index: -1;
+}
+
+.covers-gallery {
+  transform: rotate(17deg);
+  min-width: 1125px;
   position: relative;
-  overflow: hidden;
+  left: 100px;
+  top: 100px;
 }
 
-.marquee {
-  overflow: hidden;
-  gap: 20px;
-  position: relative;
+.covers-list {
   display: flex;
-  white-space: nowrap;
-  position: relative;
-  flex-wrap: nowrap;
-  animation-play-state: paused;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.covers.in-viewport .marquee {
-  animation-play-state: running;
+.covers-item:nth-child(6),
+.covers-item:nth-child(7),
+.covers-item:nth-child(8),
+.covers-item:nth-child(9),
+.covers-item:nth-child(10),
+.covers-item:nth-child(16),
+.covers-item:nth-child(17),
+.covers-item:nth-child(18),
+.covers-item:nth-child(19),
+.covers-item:nth-child(20) {
+  transform: translateX(75px);
 }
 
-.marquee::after {
-  content: attr(data-content);
-  display: flex;
+.animation {
+  animation-name: coversAnim;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
 }
 
-.marquee li {
-  list-style: none;
+@keyframes coversAnim {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-.speed-1 {
-  top: 0;
-}
-.speed-2 {
-  top: 150px;
-}
-.speed-3 {
-  top: 300px;
-}
-.speed-4 {
-  top: 450px;
-}
-.speed-5 {
-  top: 600px;
-}
-
-.marquee ul {
-  position: relative;
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  animation-timing-function: linear;
-}
-
-.marquee img {
-  max-width: 228px;
-
+.covers-item img {
+  width: 290px;
+  height: 163px;
   object-fit: cover;
 }
 
-@keyframes diagonalMoveUp {
-  from {
-    transform: translate(100vw, 50vh) rotate(16deg);
+@media screen and (min-width: 768px) {
+  .container-covers {
+    max-height: 960px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
-  to {
-    transform: translate(-100vw, -50vh) rotate(16deg);
+
+  .covers-gallery {
+    min-width: 1900px;
+    max-width: 2000px;
+    left: 0px;
+    top: 0px;
+  }
+
+  .covers-list {
+    gap: 32px;
+  }
+
+  @keyframes coversAnim {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .covers-item:nth-child(6),
+  .covers-item:nth-child(7),
+  .covers-item:nth-child(8),
+  .covers-item:nth-child(9),
+  .covers-item:nth-child(10),
+  .covers-item:nth-child(16),
+  .covers-item:nth-child(17),
+  .covers-item:nth-child(18),
+  .covers-item:nth-child(19),
+  .covers-item:nth-child(20) {
+    transform: translateX(150px);
+  }
+
+  .covers-item img {
+    width: 544px;
+    height: 314px;
   }
 }
 
-.speed {
-  animation: diagonalMoveUp 9s linear infinite;
-}
+@media screen and (min-width: 1440px) {
+  .covers-gallery {
+    top: 0px;
+    left: 100px;
+    min-width: 3000px;
+  }
 
-@media only screen and (min-width: 1440px) {
-  .covers-container {
-    min-width: 2000px;
+  @keyframes coversAnim {
+    from {
+      transform: translateX(-20%);
+    }
+
+    to {
+      transform: translateX(-35%);
+    }
   }
 }
