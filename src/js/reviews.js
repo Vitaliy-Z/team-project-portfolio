@@ -6,15 +6,34 @@ import 'swiper/css/pagination';
 
 
 const reviewsListEl = document.querySelector('.js-reviews-list');
-const reviewsPaginationContsinerEl = document.querySelector('.js-reviews-pagination');
+const reviewsNavContainerEl = document.querySelector('.js-reviews-nav');
 
 
 const renderReviews = (reviews) => {
     if (!reviews.length) {
         showErrorMessage();
+        return;
     }
+
     const markup = reviews.map(createReviewCardTemplate).join('');
     reviewsListEl.innerHTML = markup;
+
+
+new Swiper('.reviews-swiper', {
+  spaceBetween: 16,
+  wrapperClass: 'reviews-swiper-wrapper',
+  slideClass: 'reviews-swiper-slide',
+  navigation: {
+    nextEl: '.reviews-swiper-button-next',
+    prevEl: '.reviews-swiper-button-prev',
+  },
+
+  slidesPerView: 4,
+});
+    
+    // setTimeout(() => {
+    //   initializeSwiper();
+    // }, 0); 
 }
 
 
@@ -31,7 +50,7 @@ fetchReviews()
 
 const showErrorMessage = () => {
         reviewsListEl.innerHTML = `<p class="reviews-eroor-message">Not found</p>`;
-        // reviewsPaginationContsinerEl.classList.add('visually-hidden');
+        reviewsNavContainerEl.classList.add('visually-hidden');
     };
 
 const createReviewCardTemplate = reviewer => {
@@ -42,7 +61,7 @@ const {
     } = reviewer;
 
     return `
-    <li class="swiper-slide review-item">
+    <li class="reviews-swiper-slide review-item">
         <img class="reviewer-avatar" src=${avatar_url} alt="reviewer-${author}">
         <h3 class="reviewer-name">${author}</h3>
         <p class="review-text">${review}</p>
@@ -50,18 +69,8 @@ const {
 }
 
 
-const initializeSwiper = () => {
-    new Swiper('.swiper', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-reviews-button-next',
-        prevEl: '.swiper-reviews-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    //   slidesPerView: 1, // 1 відгук на екрані
-      spaceBetween: 16, // Відстань між відгуками
-    });
-};
+
+
+// const initializeSwiper = () => {
+    
+// };

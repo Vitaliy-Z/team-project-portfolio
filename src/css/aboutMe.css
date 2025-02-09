@@ -110,7 +110,7 @@
   justify-content: center;
   align-items: center;
 }
-.swiper-slide-active,
+.swiper-slide-active.about-me-skills-item-l .about-me-skills-item-l,
 .about-me-skills-item-l:active,
 .about-me-skills-item-l:focus {
   background-color: var(--button-text);
