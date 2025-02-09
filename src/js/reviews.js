@@ -54,7 +54,7 @@ const createReviewCardTemplate = reviewer => {
 const initializeSwiper = () => {
     new Swiper('.reviews-swiper', {
       slidesPerView: 1,
-    //   spaceBetween: 16,
+      spaceBetween: 16,
       autoHeight: true,
       loop: false,
       direction: 'horizontal',
