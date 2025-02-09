@@ -17,8 +17,6 @@ const renderReviews = reviews => {
 
   const markup = reviews.map(createReviewCardTemplate).join('');
   reviewsListEl.innerHTML = markup;
-
-    console.log(markup);
     
     setTimeout(() => {
       initializeSwiper();
@@ -53,10 +51,12 @@ const createReviewCardTemplate = reviewer => {
 
 const initializeSwiper = () => {
     new Swiper('.reviews-swiper', {
+      speed: 600,
       slidesPerView: 1,
       spaceBetween: 16,
       autoHeight: true,
       loop: false,
+      grabCursor: true,
       direction: 'horizontal',
       wrapperClass: 'reviews-swiper-wrapper',
       slideClass: 'reviews-swiper-slide',
@@ -65,6 +65,19 @@ const initializeSwiper = () => {
         nextEl: '.reviews-swiper-button-next',
         prevEl: '.reviews-swiper-button-prev',
       },
+      mousewheel: {
+        sensitivity: 1,
+        eventsTarget: '.reviews-swiper-wrapper',
+      },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+      },
+      mousewheel: {
+        enabled: true,
+        eventsTarget: '.reviews-swiper-slide',
+      },
       breakpoints: {
         768: {
           slidesPerView: 2,
@@ -72,6 +85,24 @@ const initializeSwiper = () => {
         1440: {
           slidesPerView: 4,
         },
-    },
+      },
+      on: {
+        slideChange: function () {
+          if (swiper.isEnd) {
+            nextButton.classList.add('swiper-button-disabled');
+            nextButton.setAttribute('disabled', true);
+          } else {
+            nextButton.classList.remove('swiper-button-disabled');
+            nextButton.removeAttribute('disabled');
+          }
+          if (swiper.isBeginning) {
+            prevButton.classList.add('swiper-button-disabled');
+            prevButton.setAttribute('disabled', true);
+          } else {
+            prevButton.classList.remove('swiper-button-disabled');
+            prevButton.removeAttribute('disabled');
+          }
+        },
+      },
     });
 };

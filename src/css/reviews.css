@@ -5,6 +5,7 @@
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.4);
   text-transform: uppercase;
+  margin-bottom: 32px;
 }
 
 .reviews-swiper {
@@ -14,8 +15,6 @@
   flex-direction: row;
   margin-bottom: 32px;
 }
-
-
 
 .reviews-list {
   margin: 32px 0;
@@ -81,12 +80,17 @@
 
 .icon-arrow {
   stroke: #3b3b3b;
-
 }
 
 .btn-arrow:hover .icon-arrow,
 .btn-arrow:focus .icon-arrow {
   stroke: #fafafa;
+}
+
+.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: default;
 }
 
 .reviews-eroor-message {
@@ -103,17 +107,9 @@
   }
 }
 
-
-
-
-
 @media only screen and (min-width: 1440px) {
   .reviews-swiper {
     max-width: 1376px;
-  }
-
-  .reviews-swiper-wrapper {
-    
   }
 
   .review-item {
