@@ -1,3 +1,236 @@
 .about-me-section {
-  color: aqua;
+  padding-top: 64px;
+}
+
+.about-me-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.description-about-me-text {
+  padding: 32px 32px 272px;
+  border-radius: 24px;
+  background: var(--cards);
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.description-about-me-span-f {
+  color: var(--button-text);
+}
+.description-about-me-span-w {
+  color: var(--arrow);
+}
+
+.description-about-me-img {
+  border-radius: 24px;
+}
+.about-me-list {
+  margin-bottom: 32px;
+}
+
+.about-me-item {
+  padding: 20px 0px 32px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+.about-me-item-l-b {
+  display: flex;
+  justify-content: space-between;
+}
+.about-me-item-l {
+  padding-top: 12px;
+  margin-bottom: -12px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.about-me-title {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.about-me-list-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 9px;
+  background-color: transparent;
+}
+
+.about-me-svg {
+  stroke: white;
+  width: 18px;
+  height: 18px;
+  transition-duration: 500ms;
+}
+
+.about-me-item.is-active .about-me-svg {
+  transform: rotate(180deg);
+  transition-duration: 500ms;
+}
+
+.about-me-text {
+  letter-spacing: -0.02em;
+}
+
+.about-me-skills-list {
+  display: flex;
+  gap: 0px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-me-skills-list-i {
+  display: flex;
+  overflow: hidden;
+  max-width: 260px;
+}
+
+.about-me-skills-item-l {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  min-width: 130px;
+  min-height: 130px;
+  border-radius: 100%;
+  stroke-width: 1px;
+  stroke: rgba(250, 250, 250, 0.2);
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-slide-active,
+.about-me-skills-item-l:active,
+.about-me-skills-item-l:focus {
+  background-color: var(--button-text);
+}
+
+.about-me-skills-text {
+  letter-spacing: -0.02em;
+}
+.about-me-skills-button {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  border: none;
+}
+.about-me-skills-svg {
+  stroke: #3b3b3b;
+  width: 28px;
+  height: 28px;
+}
+
+@media screen and (min-width: 375px) {
+  .about-me-skills-list {
+    gap: 55px;
+  }
+  .about-me-skills-list-i {
+    min-width: 260px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .about-me-box {
+    margin-bottom: 64px;
+  }
+  .description-about-me-text {
+    padding: 64px 64px 436px;
+    font-size: 38px;
+    line-height: 1.05263;
+  }
+  .about-me-list {
+    margin-bottom: 64px;
+  }
+
+  .about-me-item-l {
+    padding-top: 8px;
+    margin-bottom: 0;
+    gap: 16px;
+  }
+  .about-me-item {
+    padding: 32px 0px;
+  }
+
+  .about-me-list-button {
+    padding: 9px;
+  }
+
+  .about-me-skills-list {
+    gap: 64px;
+  }
+
+  .about-me-skills-item-l {
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+  .about-me-skills-text {
+    font-size: 20px;
+  }
+
+  .about-me-skills-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-me-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-me-skills-svg {
+    stroke: #3b3b3b;
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-me-skills-list-i {
+    min-width: 600px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .about-me-section {
+    padding-top: 96px;
+  }
+
+  .about-me-box {
+    flex-direction: row;
+    margin-bottom: 96px;
+  }
+
+  .description-about-me-text {
+    padding: 64px 64px 436px;
+    max-width: 680px;
+    font-size: 38px;
+    line-height: 1.05;
+  }
+  .about-me-list {
+    margin-bottom: 96px;
+  }
+  .about-me-item-l {
+    margin-right: 68px;
+    margin-left: auto;
+    max-width: 612px;
+    gap: 32px;
+  }
+
+  .about-me-skills-list {
+    gap: 72px;
+  }
+
+  .about-me-skills-list-i {
+    min-width: 1200px;
+  }
 }
