@@ -1,5 +1,7 @@
 import { fetchReviews } from './swagger-api';
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -16,7 +18,11 @@ const renderReviews = reviews => {
   const markup = reviews.map(createReviewCardTemplate).join('');
   reviewsListEl.innerHTML = markup;
 
-    initializeSwiper();
+    console.log(markup);
+    
+    setTimeout(() => {
+      initializeSwiper();
+    }, 0);
 };
 
 fetchReviews()
@@ -48,14 +54,24 @@ const createReviewCardTemplate = reviewer => {
 const initializeSwiper = () => {
     new Swiper('.reviews-swiper', {
       slidesPerView: 1,
-      spaceBetween: 16,
+    //   spaceBetween: 16,
       autoHeight: true,
       loop: false,
+      direction: 'horizontal',
       wrapperClass: 'reviews-swiper-wrapper',
       slideClass: 'reviews-swiper-slide',
+      modules: [Navigation],
       navigation: {
         nextEl: '.reviews-swiper-button-next',
         prevEl: '.reviews-swiper-button-prev',
       },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+        },
+        1440: {
+          slidesPerView: 4,
+        },
+    },
     });
 };
