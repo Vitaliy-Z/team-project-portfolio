@@ -1,6 +1,6 @@
 import { fetchReviews } from './swagger-api';
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -8,6 +8,11 @@ import 'swiper/css/pagination';
 
 const reviewsListEl = document.querySelector('.js-reviews-list');
 const reviewsNavContainerEl = document.querySelector('.js-reviews-nav');
+const nextButton = document.querySelector('.btn-forward');
+const prevButton = document.querySelector('.btn-backward');
+
+console.log(nextButton);
+console.log(prevButton);
 
 const renderReviews = reviews => {
   if (!reviews.length) {
@@ -51,21 +56,22 @@ const createReviewCardTemplate = reviewer => {
 
 const initializeSwiper = () => {
     new Swiper('.reviews-swiper', {
-      speed: 600,
-      slidesPerView: 1,
-      spaceBetween: 16,
-      autoHeight: true,
-      loop: false,
-      grabCursor: true,
-      direction: 'horizontal',
-      wrapperClass: 'reviews-swiper-wrapper',
-      slideClass: 'reviews-swiper-slide',
-      modules: [Navigation],
-      navigation: {
+        speed: 600,
+        slidesPerView: 1,
+        spaceBetween: 16,
+        autoHeight: true,
+        loop: false,
+        grabCursor: true,
+        direction: 'horizontal',
+        wrapperClass: 'reviews-swiper-wrapper',
+        slideClass: 'reviews-swiper-slide',
+        modules: [Navigation, Mousewheel, Keyboard],
+        navigation: {
         nextEl: '.reviews-swiper-button-next',
         prevEl: '.reviews-swiper-button-prev',
       },
       mousewheel: {
+        invert: true,
         sensitivity: 1,
         eventsTarget: '.reviews-swiper-wrapper',
       },
@@ -76,7 +82,7 @@ const initializeSwiper = () => {
       },
       mousewheel: {
         enabled: true,
-        eventsTarget: '.reviews-swiper-slide',
+        eventsTarget: '.reviews-swiper',
       },
       breakpoints: {
         768: {
@@ -87,7 +93,7 @@ const initializeSwiper = () => {
         },
       },
       on: {
-        slideChange: function () {
+        slideChange: function (swiper) {
           if (swiper.isEnd) {
             nextButton.classList.add('swiper-button-disabled');
             nextButton.setAttribute('disabled', true);
