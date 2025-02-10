@@ -77,7 +77,7 @@
 .header-modal-menu {
   stroke-width: 2px;
   stroke: #fafafa;
-  background-color: #1c1d20;
+  background-color: transparent;
   border: none;
   display: flex;
   padding: 0;
@@ -99,7 +99,6 @@
   .burger-btn {
     display: block;
   }
-  
 }
 
 @media (min-width: 768px) {
