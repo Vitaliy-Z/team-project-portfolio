@@ -18,7 +18,14 @@
   z-index: -1;
   width: 50%;
   height: 100%;
-  background-image: url('/img/footer/Glass\ effect\ 2.png');
+  background-image: url('/img/footer/footer-bg_1x.webp');
+}
+
+@media only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi) {
+  .footer::after {
+    background-image: url('/img/footer/footer-bg_2x.webp');
+  }
 }
 
 .footer-avatar {
@@ -174,6 +181,15 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+}
+
+@media screen and (max-width: 340px) {
+  .footer .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
