@@ -21,7 +21,7 @@
   justify-content: center;
   gap: 20px;
 
-  animation-duration: 30s;
+  animation-duration: 50s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
