@@ -1,7 +1,5 @@
 import './js/header';
-import './js/hero';
 import './js/aboutMe';
-import './js/benefits';
 import './js/projects';
 import './js/faq';
 import './js/covers';
