@@ -26,19 +26,12 @@ async function onSubmit(e) {
   const email = e.currentTarget.elements.email.value;
   const comment = e.currentTarget.elements.comment.value;
 
-  console.log(email, comment);
-
   const res = await fetchComment({ email, comment });
 
-  console.log('res:', res);
-
   if (res.status !== 201) {
-    console.log('ERROR');
-
     iziToast.error({
       message: 'Sorry, something happened correct the data and try again',
     });
-
     return;
   }
 
