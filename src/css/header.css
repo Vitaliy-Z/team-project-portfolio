@@ -1,6 +1,7 @@
 .header {
+  position: absolute;
   padding: 32px 0 0 0;
-  position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -75,6 +76,8 @@
 }
 
 .header-modal-menu {
+  position: fixed;
+  right: 20px;
   stroke-width: 2px;
   stroke: #fafafa;
   background-color: transparent;
@@ -104,9 +107,5 @@
 @media (min-width: 768px) {
   .header-modal-menu {
     display: none;
-  }
-
-  .header {
-    position: absolute;
   }
 }
