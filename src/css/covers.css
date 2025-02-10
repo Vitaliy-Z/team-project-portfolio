@@ -45,6 +45,7 @@
   }
   .covers-gallery {
     width: calc(550px * 10 + 30px * 9);
+    transform: translate(-50%, -15%) rotate(17deg);
     gap: 30px;
   }
   .covers-list {
@@ -72,6 +73,8 @@
     height: 320px;
   }
   .covers-gallery {
+    transform: translate(-50%, -35%) rotate(17deg);
+
     width: calc(550px * 10 + 40px * 9);
     gap: 40px;
   }
