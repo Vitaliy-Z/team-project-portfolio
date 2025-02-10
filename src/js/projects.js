@@ -1,10 +1,19 @@
+import Swiper from 'swiper';
+import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
-
+  modules: [Navigation, Mousewheel, Keyboard],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.project-swiper-button-next',
+    prevEl: '.project-swiper-button-prev',
+  },
+   mousewheel: {
+    invert: true,
   },
   keyboard: {
     enabled: true,
@@ -14,6 +23,7 @@ const swiper = new Swiper('.swiper', {
 
 document.querySelectorAll('.see-project').forEach(button => {
   button.addEventListener('click', function () {
-    window.location.href = 'https://github.com/github';
+    window.open('https://github.com/github', '_blank');
   });
 });
+

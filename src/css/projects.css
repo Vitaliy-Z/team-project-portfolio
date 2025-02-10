@@ -16,15 +16,15 @@
   margin-bottom: 32px;
 }
 
-.swiper {
+.projects-section .swiper {
   overflow: hidden;
 }
 
-.swiper-wrapper {
+.projects-section .swiper-wrapper {
   display: flex;
 }
 
-.swiper-slide {
+.projects-section .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -100,11 +100,13 @@
 .first-project-img-container {
   background-image: url(../img/projects/mobile/books.webp);
 }
+
 @media (min-resolution: 192dpi) {
   .first-project-img-container {
     background-image: url(../img/projects/mobile/books-2x.webp);
   }
 }
+
 .second-project-img-container {
   background-image: url(../img/projects/mobile/pets.webp);
 }
@@ -114,6 +116,7 @@
     background-image: url(../img/projects/mobile/pets-2x.webp);
   }
 }
+
 .third-project-img-container {
   background-image: url(../img/projects/mobile/register.webp);
 }
@@ -149,12 +152,14 @@
   height: 24px;
   stroke: #fafafa;
 }
+
 .nav-button:disabled {
   cursor: not-allowed;
   border: 1px solid rgba(250, 250, 250, 0.2);
   opacity: 0.5;
 }
-.swiper-button-prev .nav-button-svg {
+
+.project-swiper-button-prev .nav-button-svg {
   transform: rotate(180deg);
 }
 
@@ -166,27 +171,33 @@
   .info-container {
     padding: 64px;
   }
+
   .tag {
     padding: 18px;
   }
+
   .project-title {
     font-size: 44px;
     line-height: 1;
     margin-top: 164px;
     width: 500px;
   }
+
   .see-project {
     padding: 18px 50px;
   }
+
   .content-container {
     padding: 120px 45px;
   }
+
   .first-project-img-container,
   .second-project-img-container,
   .third-project-img-container {
     width: 614px;
     height: 385px;
   }
+
   .first-project-img-container {
     background-image: url(../img/projects/tablet/books.webp);
   }
@@ -216,13 +227,16 @@
       background-image: url(../img/projects/tablet/register-2x.webp);
     }
   }
+
   .custom-nav {
     margin-top: 64px;
     gap: 20px;
   }
+
   .nav-button {
     padding: 17px;
   }
+
   .nav-button-svg {
     width: 32px;
     height: 32px;
@@ -230,16 +244,19 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .swiper-slide {
+  .projects-section .swiper-slide {
     flex-direction: row;
   }
+
   .info-container {
     padding: 64px 130px 64px 64px;
     border-radius: 24px 0 0 24px;
   }
+
   .project-title {
     margin-top: 223px;
   }
+
   .content-container {
     padding: 120px 37px;
     border-radius: 0 24px 24px 0;
