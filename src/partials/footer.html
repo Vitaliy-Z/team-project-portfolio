@@ -1,46 +1,67 @@
 <footer class="footer">
-
   <div class="container">
-    <div class="title-container">
-      <div class="text-block">
+    <h2 class="footer-title">
+      <img
+        src="../img/footer/testImg-footer.png"
+        alt="avatar"
+        class="footer-avatar"
+      />LET'S <span>WORK</span> <br />TOGETHER
+    </h2>
 
-        <h2><img src="../img/footer/testImg-footer.png" alt="Profile" class="avatar">LET'S <span>WORK</span>
-          <br>TOGETHER
-        </h2>
-      </div>
-    </div>
-    <form id="contactForm" class="contact-form">
-      <div class="email-container">
-        <input type="email" name="email" placeholder="client@gmail.com" pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
-          autocomplete="off" class="email-form" required>
-        <div class="validation-line"></div>
-        <span class="validation-message"></span>
-      </div>
-      <input name="comments" placeholder="comments" class="input-form input-form-right" autocomplete="off"
-        required></input>
-      <button type="submit" class="send-button">Send</button>
+    <form id="contactForm" class="footer-contact-form">
+      <input
+        class="footer-input"
+        type="email"
+        name="email"
+        placeholder="client@gmail.com"
+        pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+        autocomplete="off"
+        required
+        value="mail@mail.com"
+      />
+
+      <span class="validation-message"></span>
+
+      <input
+        class="footer-input"
+        name="comment"
+        placeholder="comments"
+        autocomplete="off"
+        required
+        value="mail@mail.com"
+      />
+      <button type="submit" class="footer-send-button">Send</button>
     </form>
 
-    <div class="contact-info">
-      <a href="mailto:lloydefferson@gmail.com" class="contact-link">lloydjefferson@gmail.com</a>
-      <a href="tel:+380111111111" class="contact-link">+380 11 1111 11 11</a>
-    </div>
-
+    <ul class="contact-info">
+      <li>
+        <a href="mailto:lloydefferson@gmail.com" class="contact-link"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+      <li>
+        <a href="tel:+380111111111" class="contact-link">+380 11 1111 11 11</a>
+      </li>
+    </ul>
 
     <!-- Modal -->
-    <div id="successModal" class="modal">
+    <div id="successModal" class="modal visually-hidden">
       <div class="modal-content">
-        <button class="modal-close"><svg class="footer-modal-svg">
+        <button class="modal-close">
+          <svg class="footer-modal-svg">
             <use href="/img/sprite.svg#icon-close"></use>
-          </svg></button>
+          </svg>
+        </button>
         <div class="modal-text">
-          <h3 class="footer-modal-header">Thank you for your interest in cooperation!</h3>
-          <p class="footer-modal-paragraph">The manager will contact you shortly to discuss further details and
-            opportunities for cooperation. Please stay in touch.</p>
+          <h3 class="footer-modal-header">
+            Thank you for your interest in cooperation!
+          </h3>
+          <p class="footer-modal-paragraph">
+            The manager will contact you shortly to discuss further details and
+            opportunities for cooperation. Please stay in touch.
+          </p>
         </div>
       </div>
-
     </div>
   </div>
-
 </footer>
