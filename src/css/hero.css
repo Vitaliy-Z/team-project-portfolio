@@ -3,19 +3,14 @@
   padding-top: 281px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right 55% bottom 50%;
-  background-image: url('../img/hero/hero-background-desktop-x1.png');
+  background-position: right 65% bottom 50%;
+  background-image: url('/img/hero/hero-background-desktop-x1.webp');
 }
 
 @media (min-resolution: 2dppx) {
   .hero-section {
-    background-image: url('../img/hero/hero-background-desktop-x2.png');
+    background-image: url('/img/hero/hero-background-desktop-x2.webp');
   }
-}
-.hero-section .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .hero-title {
@@ -29,8 +24,9 @@
 
 .media-list {
   display: flex;
+  justify-content: end;
   gap: 4px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .media-link {
@@ -49,7 +45,7 @@
   border-radius: 60px;
   font-size: 14px;
   letter-spacing: -0.02em;
-  padding: 9px 12px;
+  padding: 10px 12px;
 }
 .media-link:hover {
   border: 1px solid var(--main-text);
@@ -62,19 +58,13 @@
 
 @media (min-width: 768px) {
   .hero-section {
-    background-position: center;
     padding-top: 300px;
     padding-bottom: 32px;
   }
 
   .hero-title {
-    max-width: 633px;
     font-size: 90px;
     margin-bottom: 187px;
-  }
-
-  .media-list {
-    align-self: flex-end;
   }
 
   .media-item {
@@ -84,6 +74,7 @@
   .media-link {
     height: 55px;
     width: 55px;
+    font-size: 16px;
   }
   .media-link-email {
     padding: 18px 24px;
@@ -94,7 +85,7 @@
 @media (min-width: 1440px) {
   .hero-title {
     max-width: 1084px;
-    font-size: 90px;
+    margin: 0 auto;
     margin-bottom: 243px;
   }
 }
