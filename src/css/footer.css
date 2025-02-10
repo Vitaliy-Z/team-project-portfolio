@@ -40,6 +40,10 @@
   color: #ed3b44;
 }
 
+.footer-form-email-wrapper {
+  position: relative;
+  width: 100%;
+}
 .footer-input {
   display: block;
   width: 100%;
@@ -62,9 +66,7 @@
 .footer-input:focus {
   outline: none;
 }
-.footer-input:last-child {
-  margin-bottom: 32px;
-}
+
 .footer-input.valid {
   border-bottom-color: #3cbc81;
 }
@@ -73,19 +75,13 @@
 }
 
 .validation-message {
+  position: absolute;
+  top: -20px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.2%;
   letter-spacing: -0.02em;
   color: #e74a3b;
-}
-.valid.validation-message {
-  color: #3cbc81;
-  opacity: 1;
-}
-.invalid.validation-message {
-  color: #e74a3b;
-  opacity: 1;
 }
 
 .footer-send-button {
@@ -210,6 +206,10 @@
 
   .footer-input {
     margin: 0;
+  }
+  .validation-message {
+    position: absolute;
+    top: 60px;
   }
 
   .footer-send-button {

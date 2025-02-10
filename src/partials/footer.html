@@ -9,18 +9,19 @@
     </h2>
 
     <form id="contactForm" class="footer-contact-form">
-      <input
-        class="footer-input"
-        type="email"
-        name="email"
-        placeholder="client@gmail.com"
-        pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
-        autocomplete="off"
-        required
-        value="mail@mail.com"
-      />
-
-      <span class="validation-message"></span>
+      <div class="footer-form-email-wrapper">
+        <input
+          class="footer-input"
+          type="email"
+          name="email"
+          placeholder="client@gmail.com"
+          pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+          autocomplete="off"
+          required
+          value="mail@mail.com"
+        />
+        <span class="validation-message"></span>
+      </div>
 
       <input
         class="footer-input"
@@ -53,13 +54,8 @@
           </svg>
         </button>
         <div class="modal-text">
-          <h3 class="footer-modal-header">
-            Thank you for your interest in cooperation!
-          </h3>
-          <p class="footer-modal-paragraph">
-            The manager will contact you shortly to discuss further details and
-            opportunities for cooperation. Please stay in touch.
-          </p>
+          <h3 class="footer-modal-header"></h3>
+          <p class="footer-modal-paragraph"></p>
         </div>
       </div>
     </div>

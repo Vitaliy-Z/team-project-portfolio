@@ -3,6 +3,8 @@
 @import url('./base.css');
 @import url('./container.css');
 
+@import url('izitoast/dist/css/iziToast.min.css');
+
 /* Sections style */
 @import url('./header.css');
 @import url('./hero.css');

@@ -4,7 +4,18 @@
     closeModalBtn: document.querySelector('[data-menu-close]'),
     modal: document.querySelector('[data-menu-modal]'),
     menuLinks: document.querySelectorAll('.menu-link'),
+    headerBtn: document.querySelector('.header-btm'),
+    mobMenuheaderBtn: document.querySelector('.order-btn'),
+    footerForm: document.querySelector('#contactForm'),
   };
+  refs.headerBtn.addEventListener('click', () => {
+    toggleModal();
+    refs.footerForm.scrollIntoView();
+  });
+  refs.mobMenuheaderBtn.addEventListener('click', () => {
+    toggleModal();
+    refs.footerForm.scrollIntoView();
+  });
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
   refs.menuLinks.forEach(link => {

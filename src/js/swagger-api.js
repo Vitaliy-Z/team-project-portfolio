@@ -9,6 +9,7 @@ export const fetchComment = async userData => {
     const data = await axios.post(API_URL + 'requests', userData);
     return data;
   } catch (error) {
-    throw new Error(error);
+    console.log(error);
+    return error;
   }
 };
