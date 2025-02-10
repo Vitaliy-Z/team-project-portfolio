@@ -36,6 +36,7 @@ async function onSubmit(e) {
   }
 
   footerFromEl.reset();
+
   addTextModal(res.data);
   toggleModal();
 }
