@@ -5,6 +5,7 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
 
 new Accordion(".about-me-list", {
+    openOnInit: [0],
     duration: 500,
     elementClass: 'about-me-item',
     triggerClass: 'about-me-list-button',
@@ -29,7 +30,6 @@ new Swiper('.about-me-skills-list', {
     slideClass: 'about-me-skills-item-l',
     modules: [Navigation, Mousewheel, Keyboard],
     centeredSlides: false,
-    loopedSlides: 6,
     navigation: {
         nextEl: '.about-me-skills-button',
     },
