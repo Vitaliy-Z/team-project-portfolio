@@ -18,6 +18,17 @@ iziToast.settings({
 });
 
 footerFromEl.addEventListener('submit', onSubmit);
+footerModalEl.addEventListener(
+  'click',
+  evt => evt.target === evt.currentTarget && toggleModal()
+);
+document.addEventListener('keydown', evt => {
+  if (
+    evt.code === 'Escape' &&
+    !footerModalEl.classList.contains('visually-hidden')
+  )
+    toggleModal();
+});
 modalBtnClose.addEventListener('click', () => toggleModal());
 footerFromEl.elements.email.addEventListener('input', onValidation);
 
@@ -58,6 +69,12 @@ function onValidation({ currentTarget }) {
   }
 }
 function toggleModal() {
+  if (footerModalEl.classList.contains('visually-hidden')) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+
   footerModalEl.classList.toggle('visually-hidden');
 }
 function addTextModal({ title, message }) {

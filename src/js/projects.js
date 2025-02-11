@@ -21,9 +21,5 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-document.querySelectorAll('.see-project').forEach(button => {
-  button.addEventListener('click', function () {
-    window.open('https://github.com/github', '_blank');
-  });
-});
+
 
