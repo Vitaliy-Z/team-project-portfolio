@@ -59,7 +59,7 @@
 }
 
 .see-project {
-  display: flex;
+  display: inline-flex;
   padding: 13px 32px;
   background-color: #ed3b44;
   color: #fafafa;
@@ -70,6 +70,7 @@
   font-weight: 500;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .see-project:hover {
