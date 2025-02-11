@@ -8,24 +8,52 @@
     mobMenuheaderBtn: document.querySelector('.order-btn'),
     footerForm: document.querySelector('#contactForm'),
   };
+
+  const isMobile = () => window.innerWidth <= 767;
+
   refs.headerBtn.addEventListener('click', () => {
-    toggleModal();
-    refs.footerForm.scrollIntoView();
+    if (isMobile()) {
+      toggleModal();
+      refs.footerForm.scrollIntoView();
+    } else {
+      refs.footerForm.scrollIntoView();
+    }
   });
+
   refs.mobMenuheaderBtn.addEventListener('click', () => {
-    toggleModal();
-    refs.footerForm.scrollIntoView();
+    if (isMobile()) {
+      toggleModal();
+      refs.footerForm.scrollIntoView();
+    } else {
+      refs.footerForm.scrollIntoView();
+    }
   });
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+
+  refs.openModalBtn.addEventListener('click', () => {
+    if (isMobile()) {
+      toggleModal();
+    }
+  });
+
+  refs.closeModalBtn.addEventListener('click', () => {
+    if (isMobile()) {
+      toggleModal();
+    }
+  });
+
   refs.menuLinks.forEach(link => {
     link.addEventListener('click', e => {
       const targetId = link.getAttribute('href').substring(1);
       const targetElement = document.getElementById(targetId);
 
-      if (targetElement) {
+      if (targetElement && isMobile()) {
         e.preventDefault();
         toggleModal();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      } else if (targetElement && !isMobile()) {
         targetElement.scrollIntoView({
           behavior: 'smooth',
           block: 'start',
