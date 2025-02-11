@@ -51,6 +51,10 @@
   overflow: hidden;
 }
 
+.am-me-open {
+  visibility: visible;
+}
+
 .about-me-title {
   font-weight: 600;
   letter-spacing: -0.02em;
