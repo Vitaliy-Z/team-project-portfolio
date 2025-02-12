@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: flex-start;
 }
+
 .faq-title {
   width: 265px;
   font-weight: 600;
@@ -69,8 +70,19 @@
 @media only screen and (min-width: 1440px) {
   .faq-list {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-auto-flow: column;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .q-deadlines {
+    order: 1;
+  }
+  .q-support {
+    order: 2;
+  }
+  .q-payment {
+order: 3;
+  }
+  .q-process {
+    order: 4;
   }
   .faq-container {
     padding: 32px;
@@ -83,5 +95,9 @@
   .faq-container:nth-last-child(-n + 3) {
     border-right: none;
     padding-right: 0px;
+  }
+  .faq-btn {
+    width: 40px;
+    height: 40px;
   }
 }
