@@ -11,6 +11,14 @@
 
   const isMobile = () => window.innerWidth <= 767;
 
+  function lockScroll() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  function unlockScroll() {
+    document.body.style.overflow = 'auto';
+  }
+
   refs.headerBtn.addEventListener('click', () => {
     if (isMobile()) {
       toggleModal();
@@ -32,12 +40,14 @@
   refs.openModalBtn.addEventListener('click', () => {
     if (isMobile()) {
       toggleModal();
+      lockScroll();  
     }
   });
 
   refs.closeModalBtn.addEventListener('click', () => {
     if (isMobile()) {
       toggleModal();
+      unlockScroll(); 
     }
   });
 
@@ -53,6 +63,7 @@
           behavior: 'smooth',
           block: 'start',
         });
+        unlockScroll();  
       } else if (targetElement && !isMobile()) {
         targetElement.scrollIntoView({
           behavior: 'smooth',
