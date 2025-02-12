@@ -145,7 +145,8 @@
   justify-content: center;
   cursor: pointer;
   border: 1px solid rgba(250, 250, 250, 0.5);
-  transition: opacity 0.3s ease;
+  outline: none;
+  transition: opacity 0.3s ease-out, background 250ms ease-out;
 }
 
 .nav-button-svg {
@@ -158,6 +159,12 @@
   cursor: not-allowed;
   border: 1px solid rgba(250, 250, 250, 0.2);
   opacity: 0.5;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+  border-color: transparent;
+  background-color: #e0373f;
 }
 
 .project-swiper-button-prev .nav-button-svg {

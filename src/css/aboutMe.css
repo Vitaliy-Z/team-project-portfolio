@@ -71,8 +71,15 @@
   border-radius: 100px;
   padding: 9px;
   background-color: transparent;
+
+  transition: background-color 250ms ease-out;
 }
 
+.about-me-list-button:hover,
+.about-me-list-button:focus {
+  border-color: transparent;
+  background-color: #ed3b44;
+}
 .about-me-svg {
   stroke: white;
   width: 18px;
@@ -133,6 +140,12 @@
   stroke: #3b3b3b;
   width: 28px;
   height: 28px;
+
+  transition: stroke 250ms ease-out;
+}
+.about-me-skills-button:hover .about-me-skills-svg,
+.about-me-skills-button:focus .about-me-skills-svg {
+  stroke: #ed3b44;
 }
 
 @media screen and (min-width: 375px) {

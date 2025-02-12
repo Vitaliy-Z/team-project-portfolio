@@ -30,28 +30,33 @@
 }
 
 .media-link {
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 60px;
-  height: 37px;
-  width: 37px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 37px;
+  width: 37px;
   font-size: 14px;
   letter-spacing: -0.02em;
-}
-.media-link-email {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
+  outline: none;
+
+  transition: background-color 250ms ease-out;
+}
+.media-link-email {
+  padding: 10px 12px;
   font-size: 14px;
   letter-spacing: -0.02em;
-  padding: 10px 12px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+
+  transition: background-color 250ms ease-out;
 }
-.media-link:hover {
-  border: 1px solid var(--main-text);
-}
-.media-link-email:hover {
-  border: 1px solid var(--main-text);
+.media-link:hover,
+.media-link:focus,
+.media-link-email:hover,
+.media-link-email:focus {
+  background-color: #ed3b44;
 }
 
 /* tablet */
