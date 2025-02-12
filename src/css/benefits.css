@@ -47,18 +47,21 @@
 .benefits-section .nav-button {
   display: inline-block;
   text-decoration: none;
-  cursor: pointer;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  background-color: transparent;
-  border-radius: 60px;
   padding: 18px 36px;
   white-space: nowrap;
-  transition: background-color 0.3s ease;
   letter-spacing: -0.02em;
   line-height: 1.2;
+  background-color: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 250ms ease-out;
 }
-.button:hover,
-.button:focus {
+.benefits-section .nav-button:hover,
+.benefits-section .nav-button:focus {
+  border-color: transparent;
   background-color: #ed3b44;
 }
 

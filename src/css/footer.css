@@ -65,13 +65,15 @@
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.3);
   outline: none;
+
+  transition: transform 250ms ease-out;
 }
 .footer-input::placeholder {
   color: rgba(250, 250, 250, 0.6);
 }
 .footer-input:hover,
 .footer-input:focus {
-  outline: none;
+  transform: scale(1.05);
 }
 
 .footer-input.valid {
@@ -121,11 +123,12 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color 250ms ease-out;
 }
 .contact-link:hover,
 .contact-link:focus {
-  background: rgba(250, 250, 250, 0.2);
+  border-color: transparent;
+  background-color: #ed3b44;
 }
 
 .modal {
@@ -160,11 +163,15 @@
   border: none;
   cursor: pointer;
 }
-
 .footer-modal-svg {
   width: 22px;
   height: 22px;
   stroke: #fbfbfb;
+  transition: stroke 250ms ease-out;
+}
+.modal-close:hover .footer-modal-svg,
+.modal-close:focus .footer-modal-svg {
+  stroke: #ed3b44;
 }
 
 .footer-modal-header {

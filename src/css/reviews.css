@@ -1,4 +1,3 @@
-
 .reviews-title {
   font-weight: 600;
   font-size: 16px;
@@ -26,9 +25,14 @@
 }
 
 .review-item {
+  padding: 32px 24px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
-  padding: 32px 24px;
+  transition: transform 350ms ease-out;
+}
+.review-item:hover,
+.review-item:focus {
+  box-shadow: -0px -0px 20px #ed3b44 inset;
 }
 
 .reviewer-avatar {
@@ -66,7 +70,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .btn-arrow.btn-backward {
@@ -81,6 +84,15 @@
   opacity: 0.5;
   pointer-events: none;
   cursor: default;
+}
+
+.reviews-btn {
+  transition: background 250ms ease-out;
+}
+.reviews-btn:hover,
+.reviews-btn:focus {
+  border-color: transparent;
+  background-color: var(--button-text);
 }
 
 .reviews-eroor-message {
