@@ -3,12 +3,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right 65% bottom 50%;
-  background-image: url('/img/hero/hero-bg-mob-1x.webp');
+  background-image: url('/img/hero/hero-bg-tablet-1x.webp');
 }
 @media only screen and (min-device-pixel-ratio: 2),
   only screen and (min-resolution: 192dpi) {
   .hero-section {
-    background-image: url('/img/hero/hero-bg-mob-2x.webp');
+    background-image: url('/img/hero/hero-bg-tablet-2x.webp');
   }
 }
 .hero-title {
