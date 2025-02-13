@@ -1,3 +1,6 @@
+.container-covers {
+  padding: 0;
+}
 .covers-wrapper {
   position: relative;
   overflow: hidden;

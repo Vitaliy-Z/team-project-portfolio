@@ -40,14 +40,14 @@
   refs.openModalBtn.addEventListener('click', () => {
     if (isMobile()) {
       toggleModal();
-      lockScroll();  
+      lockScroll();
     }
   });
 
   refs.closeModalBtn.addEventListener('click', () => {
     if (isMobile()) {
       toggleModal();
-      unlockScroll(); 
+      unlockScroll();
     }
   });
 
@@ -63,7 +63,7 @@
           behavior: 'smooth',
           block: 'start',
         });
-        unlockScroll();  
+        unlockScroll();
       } else if (targetElement && !isMobile()) {
         targetElement.scrollIntoView({
           behavior: 'smooth',

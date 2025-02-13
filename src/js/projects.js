@@ -4,7 +4,7 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 20,
   modules: [Navigation, Mousewheel, Keyboard],
@@ -12,7 +12,7 @@ const swiper = new Swiper('.swiper', {
     nextEl: '.project-swiper-button-next',
     prevEl: '.project-swiper-button-prev',
   },
-   mousewheel: {
+  mousewheel: {
     invert: true,
   },
   keyboard: {
@@ -20,6 +20,3 @@ const swiper = new Swiper('.swiper', {
     onlyInViewport: true,
   },
 });
-
-
-

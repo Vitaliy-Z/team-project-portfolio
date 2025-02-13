@@ -2,7 +2,7 @@ import Accordion from 'accordion-js';
 
 const list = document.querySelector('.faq-list');
 
-const accordion = new Accordion(list, {
+new Accordion(list, {
   duration: 400,
   showMultiple: true,
   openOnInit: [],
